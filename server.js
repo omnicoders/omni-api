@@ -56,6 +56,9 @@ require('./routes/static.js')(app);
 // authentication routes
 require('./routes/auth.js')(app, passport);
 
+// api routes
+require('./routes/api.js')(app);
+
 // launch server
 app.listen(port, () => {
 	console.log(`API running on port ${port}`);
