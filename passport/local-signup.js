@@ -8,10 +8,10 @@ module.exports = new PassportLocalStrategy({
   session: false,
   passReqToCallback: true
 }, (req, username, password, done) => {
+  
   const userData = {
     username: username.trim(),
     password: password.trim(),
-    name: req.body.name.trim(),
   };
     
   const newUser = new User(userData);
