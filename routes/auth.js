@@ -82,7 +82,7 @@ function validateSignupForm(payload) {
   let isFormValid = true;
   let message = '';
 
-  if (!payload || typeof payload.username !== 'string' || payload.name.trim().length === 0) {
+  if (!payload || typeof payload.username !== 'string' || payload.username.trim().length === 0) {
     isFormValid = false;
     errors.username = 'Please provide your username.';
   }
