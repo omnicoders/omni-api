@@ -59,6 +59,9 @@ require('./routes/auth.js')(app, passport);
 // api routes
 require('./routes/api.js')(app);
 
+// projects routes
+require('./routes/projects.js')(app);
+
 // launch server
 app.listen(port, () => {
 	console.log(`API running on port ${port}`);
