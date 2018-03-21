@@ -1,4 +1,7 @@
+const User = require('../models/User');
 const Project = require('../models/Project');
+const jwt = require('jsonwebtoken');
+if (!process.env.JWT_SECRET){ require('../config/env.js'); }
 
 module.exports = function(app) {
 	
