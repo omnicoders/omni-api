@@ -8,7 +8,7 @@ module.exports = function(app) {
 	// create new project
 	app.post("/projects/new", adminRequired, (req, res) => {
 		let newProject = new Project({
-			user: req.locals.currentUser._id,
+			user: res.locals.currentUser._id,
 			name: req.body.name,
 			description: req.body.description,
 			repoUrl: req.body.repoUrl,
